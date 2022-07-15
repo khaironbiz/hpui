@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
 Route::get('/',[App\Http\Controllers\HomeController::class,'index']);
-Route::get('/admin',[App\Http\Controllers\HomeController::class,'dashboard']);
+Route::get('/admin',[App\Http\Controllers\HomeController::class,'admin']);
 Route::get('/admin/data',[App\Http\Controllers\HomeController::class,'index'])->name('example.data');
 Route::get('/admin/data/add',[App\Http\Controllers\HomeController::class,'create'])->name('example.data.add');
 Route::post('/admin/data/insert-data',[App\Http\Controllers\HomeController::class,'store'])->name('example.insert');

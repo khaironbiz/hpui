@@ -21,6 +21,14 @@ class HomeController extends Controller
         ];
         return view('layouts.home', $data);
     }
+    public function admin()
+    {
+
+        $data = [
+            'title'     => 'Dashboard',
+        ];
+        return view('admin.layout.index', $data);
+    }
 
     /**
      * Show the form for creating a new resource.
