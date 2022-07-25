@@ -17,17 +17,37 @@ class HomeController extends Controller
     {
 
         $data = [
-            'title'     => 'Dashboard',
+            'title'     => 'Home',
+            'navbar'    => 'home',
         ];
-        return view('layouts.home', $data);
+        return view('landing.all.index', $data);
     }
-    public function admin()
+    public function about()
     {
 
         $data = [
-            'title'     => 'Dashboard',
+            'title'     => 'About',
+            'navbar'    => 'about',
         ];
-        return view('admin.layout.index', $data);
+        return view('landing.about.about', $data);
+    }
+    public function services()
+    {
+
+        $data = [
+            'title'     => 'Services',
+            'navbar'    => 'services',
+        ];
+        return view('landing.services.services', $data);
+    }
+    public function contact()
+    {
+
+        $data = [
+            'title'     => 'Contact Us',
+            'navbar'    => 'contact',
+        ];
+        return view('landing.contact.contact', $data);
     }
 
     /**
