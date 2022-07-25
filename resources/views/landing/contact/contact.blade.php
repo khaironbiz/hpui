@@ -3,8 +3,8 @@
 
 @section('content')
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
+    <section id="contact" class="contact mt-5" >
+        <div class="container mt-5">
 
             <div class="section-title">
                 <h2>Contact</h2>

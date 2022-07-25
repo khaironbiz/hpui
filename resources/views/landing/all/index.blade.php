@@ -1,6 +1,7 @@
 @extends('layouts.landing.home')
 
 @section('content')
+    @include('landing.slide.home')
 <!-- ======= Featured Services Section ======= -->
 <section id="featured-services" class="featured-services">
     <div class="container" data-aos="fade-up">

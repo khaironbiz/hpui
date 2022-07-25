@@ -3,8 +3,8 @@
 
 @section('content')
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services services">
-        <div class="container" data-aos="fade-up">
+    <section id="services" class="services services mt-5">
+        <div class="container mt-5" data-aos="fade-up">
 
             <div class="section-title">
                 <h2>Services</h2>

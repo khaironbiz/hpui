@@ -49,6 +49,24 @@ class HomeController extends Controller
         ];
         return view('landing.contact.contact', $data);
     }
+    public function foto()
+    {
+
+        $data = [
+            'title'     => 'Media Foto',
+            'navbar'    => 'media',
+        ];
+        return view('landing.foto.foto', $data);
+    }
+    public function video()
+    {
+
+        $data = [
+            'title'     => 'Media Video',
+            'navbar'    => 'media',
+        ];
+        return view('landing.video.video', $data);
+    }
 
     /**
      * Show the form for creating a new resource.

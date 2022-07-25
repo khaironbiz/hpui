@@ -13,6 +13,12 @@
                 <li><a class="nav-link @if($navbar=='services'): active @endif" href="/home/services">Services</a></li>
                 <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
                 <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
+                <li class="dropdown @if($navbar=='media'): active @endif"><a href="#"><span>Media</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/home/foto">Foto</a></li>
+                        <li><a href="/home/video">Video</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Drop Down 1</a></li>
