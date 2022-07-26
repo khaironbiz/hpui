@@ -11,7 +11,7 @@
                 <li><a class="nav-link @if($navbar=='home'): active @endif " href="/">Home</a></li>
                 <li><a class="nav-link @if($navbar=='about'): active @endif" href="/home/about">About</a></li>
                 <li><a class="nav-link @if($navbar=='services'): active @endif" href="/home/services">Services</a></li>
-                <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
+                <li><a class="nav-link @if($navbar=='events'): active @endif" href="/home/events">Events</a></li>
                 <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
                 <li class="dropdown @if($navbar=='media'): active @endif"><a href="#"><span>Media</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -40,8 +40,6 @@
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-
-        <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
 
     </div>
 </header><!-- End Header -->

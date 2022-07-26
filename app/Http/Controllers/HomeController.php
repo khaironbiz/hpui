@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Home;
 use App\Http\Requests\StoreHomeRequest;
 use App\Http\Requests\UpdateHomeRequest;
+use Image;
 
 class HomeController extends Controller
 {
@@ -66,6 +67,38 @@ class HomeController extends Controller
             'navbar'    => 'media',
         ];
         return view('landing.video.video', $data);
+    }
+    public function events()
+    {
+
+        $data = [
+            'title'     => 'Events',
+            'navbar'    => 'events',
+        ];
+        return view('landing.events.events', $data);
+    }
+    public function resizeImagePost(Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $image = $request->file('image');
+        $input['imagename'] = time().'.'.$image->extension();
+
+        $destinationPath = public_path('/thumbnail');
+        $img = Image::make($image->path());
+        $img->resize(100, 100, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$input['imagename']);
+
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $input['imagename']);
+
+        return back()
+            ->with('success','Image Upload successful')
+            ->with('imageName',$input['imagename']);
     }
 
     /**
